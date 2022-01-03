@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36767960-6A5A-4242-A6F5-1A9818310C50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvilEye</RootNamespace>
+    <AssemblyName>EvilEye</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\Desktop\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Desktop\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.Timeline">
+      <HintPath>..\..\..\..\Desktop\Managed\AVProVideo.Extensions.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.UnityUI">
+      <HintPath>..\..\..\..\Desktop\Managed\AVProVideo.Extensions.UnityUI.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.VisualEffectGraph">
+      <HintPath>..\..\..\..\Desktop\Managed\AVProVideo.Extensions.VisualEffectGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Runtime">
+      <HintPath>..\..\..\..\Desktop\Managed\AVProVideo.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>..\..\..\..\Desktop\Managed\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Compiler">
+      <HintPath>..\..\..\..\Desktop\Managed\Boo.Lang.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Extensions">
+      <HintPath>..\..\..\..\Desktop\Managed\Boo.Lang.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Parser">
+      <HintPath>..\..\..\..\Desktop\Managed\Boo.Lang.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.PatternMatching">
+      <HintPath>..\..\..\..\Desktop\Managed\Boo.Lang.PatternMatching.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Useful">
+      <HintPath>..\..\..\..\Desktop\Managed\Boo.Lang.Useful.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>..\..\..\..\Desktop\Managed\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>..\..\..\..\Desktop\Managed\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="Collections.Pooled">
+      <HintPath>..\..\..\..\Desktop\Managed\Collections.Pooled.dll</HintPath>
+    </Reference>
+    <Reference Include="Commons.Xml.Relaxng">
+      <HintPath>..\..\..\..\Desktop\Managed\Commons.Xml.Relaxng.dll</HintPath>
+    </Reference>
+    <Reference Include="cscompmgd">
+      <HintPath>..\..\..\..\Desktop\Managed\cscompmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="DataModel">
+      <HintPath>..\..\..\..\Desktop\Managed\DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\..\..\Desktop\Managed\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween.Modules">
+      <HintPath>..\..\..\..\Desktop\Managed\DOTween.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>..\..\..\..\Desktop\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N">
+      <HintPath>..\..\..\..\Desktop\Managed\I18N.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.CJK">
+      <HintPath>..\..\..\..\Desktop\Managed\I18N.CJK.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.MidEast">
+      <HintPath>..\..\..\..\Desktop\Managed\I18N.MidEast.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Other">
+      <HintPath>..\..\..\..\Desktop\Managed\I18N.Other.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Rare">
+      <HintPath>..\..\..\..\Desktop\Managed\I18N.Rare.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West">
+      <HintPath>..\..\..\..\Desktop\Managed\I18N.West.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.DB2">
+      <HintPath>..\..\..\..\Desktop\Managed\IBM.Data.DB2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>..\..\..\..\Desktop\Managed\Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\Desktop\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Buffers">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Collections.Immutable">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Diagnostics.StackTrace">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Drawing">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Globalization.Extensions">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Memory">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.ValueTuple">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml.Linq">
+      <HintPath>..\..\..\..\Desktop\Managed\Il2CppSystem.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\Desktop\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CompilerServices.SymbolWriter">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.CompilerServices.SymbolWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Tds">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.Data.Tds.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Messaging">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>..\..\..\..\Desktop\Managed\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VRChat\MelonLoader\Managed\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Desktop\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap">
+      <HintPath>..\..\..\..\Desktop\Managed\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Platform">
+      <HintPath>..\..\..\..\Desktop\Managed\Oculus.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.VR">
+      <HintPath>..\..\..\..\Desktop\Managed\Oculus.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon-DotNet">
+      <HintPath>..\..\..\..\Desktop\Managed\Photon-DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Rug.Osc">
+      <HintPath>..\..\..\..\Desktop\Managed\Rug.Osc.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDiagnostics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VRChat\MelonLoader\Managed\SMDiagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transmtn">
+      <HintPath>..\..\..\..\Desktop\Managed\Transmtn.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>..\..\..\..\Desktop\Managed\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib">
+      <HintPath>..\..\..\..\Desktop\Managed\UnhollowerRuntimeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>..\..\..\..\Desktop\Managed\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables">
+      <HintPath>..\..\..\..\Desktop\Managed\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>..\..\..\..\Desktop\Managed\UniTask.DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Linq">
+      <HintPath>..\..\..\..\Desktop\Managed\UniTask.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.TextMeshPro">
+      <HintPath>..\..\..\..\Desktop\Managed\UniTask.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\..\..\Desktop\Managed\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>..\..\..\..\Desktop\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\Desktop\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\..\..\Desktop\Managed\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppAssetBundleManager">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppImageConversionManager">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\Desktop\Managed\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="ValueTupleBridge">
+      <HintPath>..\..\..\..\Desktop\Managed\ValueTupleBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.SDKBase.Editor.BuildPipeline">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.SDKBase.Editor.BuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.ClientBindings">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.ClientBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Common">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Security">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Serialization.AOT">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.Serialization.AOT.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Serialization.OdinSerializer">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.Serialization.OdinSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.VM">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.VM.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.VRCWrapperModules">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.VRCWrapperModules.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Udon.Wrapper">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Udon.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Core">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Elements">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.UI.Elements.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.UI.Shared">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.UI.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="VRC.Utility">
+      <HintPath>..\..\..\..\Desktop\Managed\VRC.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Editor">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCCore-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Standalone">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCCore-Standalone.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCLog">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCLog.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK2">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCSDK2.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCSDK3.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDK3A">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCSDK3A.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCSDKBase">
+      <HintPath>..\..\..\..\Desktop\Managed\VRCSDKBase.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>..\..\..\..\Desktop\Managed\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\OnAssetBundleLoadEvent.cs" />
+    <Compile Include="Events\OnEventEvent.cs" />
+    <Compile Include="Events\OnPlayerJoinEvent.cs" />
+    <Compile Include="Events\OnPlayerLeaveEvent.cs" />
+    <Compile Include="Events\OnRPCEvent.cs" />
+    <Compile Include="Events\OnSceneLoadedEvent.cs" />
+    <Compile Include="Events\OnSendOPEvent.cs" />
+    <Compile Include="Events\OnUdonEvent.cs" />
+    <Compile Include="Events\OnUIEvent.cs" />
+    <Compile Include="Events\OnUpdateEvent.cs" />
+    <Compile Include="Events\OnWorldInitEvent.cs" />
+    <Compile Include="Module\Exploit\Event9.cs" />
+    <Compile Include="Module\Exploit\EmojiLagger.cs" />
+    <Compile Include="Module\Exploit\EventSpammer.cs" />
+    <Compile Include="Module\Render\DebugLog.cs" />
+    <Compile Include="Module\Safety\AntiAvatarCrash.cs" />
+    <Compile Include="Module\Safety\AntiBot.cs" />
+    <Compile Include="Module\Safety\AntiInvalidRpc.cs" />
+    <Compile Include="Module\Safety\RateLimit.cs" />
+    <Compile Include="Module\Settings\PlayerLogger.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Module\BaseModule.cs" />
+    <Compile Include="Module\CustomNameplate.cs" />
+    <Compile Include="Module\Exploit\AssetBundleCrash.cs" />
+    <Compile Include="Module\Exploit\FreezePlayer.cs" />
+    <Compile Include="Module\Exploit\GhostWalk.cs" />
+    <Compile Include="Module\Exploit\QuestCrash.cs" />
+    <Compile Include="Module\Exploit\UdonSpam.cs" />
+    <Compile Include="Module\Exploit\VRCA.cs" />
+    <Compile Include="Module\Exploit\VRCW.cs" />
+    <Compile Include="Module\Movement\Fly.cs" />
+    <Compile Include="Module\Movement\Speed.cs" />
+    <Compile Include="Module\PlayerModule\AviToID.cs" />
+    <Compile Include="Module\Settings\FPSUnlocker.cs" />
+    <Compile Include="Module\PlayerModule\HeadFlipper.cs" />
+    <Compile Include="Module\PlayerModule\HideSelf.cs" />
+    <Compile Include="Module\PlayerModule\LoudMic.cs" />
+    <Compile Include="Module\PlayerModule\UserID.cs" />
+    <Compile Include="Module\PlayerModule\XBoxMic.cs" />
+    <Compile Include="Module\Render\CapsuleESP.cs" />
+    <Compile Include="Module\Render\CustomNameplates.cs" />
+    <Compile Include="Module\Render\ObjectESP.cs" />
+    <Compile Include="Module\Render\TriggerESP.cs" />
+    <Compile Include="Module\Safety\AntiInvalidEvent.cs" />
+    <Compile Include="Module\Safety\AntiSound.cs" />
+    <Compile Include="Module\Settings\ConsoleClear.cs" />
+    <Compile Include="Module\Settings\EventLogger.cs" />
+    <Compile Include="Module\Settings\JoinLogger.cs" />
+    <Compile Include="Module\Settings\OPSendLogger.cs" />
+    <Compile Include="Module\Render\PlayerList.cs" />
+    <Compile Include="Module\Settings\QuickRestart.cs" />
+    <Compile Include="Module\Settings\RpcLogger.cs" />
+    <Compile Include="Module\Settings\UdonLogger.cs" />
+    <Compile Include="Module\Settings\UnityLogger.cs" />
+    <Compile Include="Module\Spoofer\FPSSpoofer.cs" />
+    <Compile Include="Module\Spoofer\PingSpoofer.cs" />
+    <Compile Include="Module\World\CopyID.cs" />
+    <Compile Include="Module\World\FreezePickups.cs" />
+    <Compile Include="Module\World\ItemOrbit.cs" />
+    <Compile Include="Module\World\JoinByID.cs" />
+    <Compile Include="Module\World\MasterLock.cs" />
+    <Compile Include="Module\World\Rejoin.cs" />
+    <Compile Include="Module\World\WorldHackManager.cs" />
+    <Compile Include="Patches.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDK\ButtonAPI\QMButtonGroup.cs" />
+    <Compile Include="SDK\ButtonAPI\QMHeader.cs" />
+    <Compile Include="SDK\ButtonAPI\QMLable.cs" />
+    <Compile Include="SDK\ButtonAPI\QMMenu.cs" />
+    <Compile Include="SDK\ButtonAPI\QMNestedButton.cs" />
+    <Compile Include="SDK\ButtonAPI\QMPopup.cs" />
+    <Compile Include="SDK\ButtonAPI\QMSingleButton.cs" />
+    <Compile Include="SDK\ButtonAPI\QMTab.cs" />
+    <Compile Include="SDK\ButtonAPI\QMToggleButton.cs" />
+    <Compile Include="SDK\Config.cs" />
+    <Compile Include="SDK\LoggerUtill.cs" />
+    <Compile Include="SDK\Misc.cs" />
+    <Compile Include="SDK\PhotonSDK\PhotonExtensions.cs" />
+    <Compile Include="SDK\PhotonSDK\Serialization.cs" />
+    <Compile Include="SDK\PlayerWrapper.cs" />
+    <Compile Include="SDK\QuickMenuStuff.cs" />
+    <Compile Include="SDK\WorldWrapper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
